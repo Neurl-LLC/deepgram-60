@@ -160,7 +160,7 @@ async def microphone(audio_queue):
 # --- MAIN EVENT LOOP ---
 async def run(key, model='nova-3'):
     deepgram_url = f"wss://api.deepgram.com/v1/listen?punctuate=true&diarize=true&model={model}&encoding=linear16&sample_rate=16000"
-    async with websockets.connect(deepgram_url, extra_headers={"Authorization": f"Token {key}"}) as ws:
+    async with websockets.connect(deepgram_url, additional_headers={"Authorization": f"Token {key}"}) as ws:
         print("✅ Connected to Deepgram.")
         tasks = [
             asyncio.create_task(sender(ws, audio_queue)),
