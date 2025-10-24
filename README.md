@@ -1,7 +1,3 @@
-Here’s a complete **`README.md`** for your repo, written in a clear and professional developer-focused style:
-
----
-
 # Real-Time Trading Transcription Service
 
 A Python-based real-time speech-to-text system designed for trading floors.
